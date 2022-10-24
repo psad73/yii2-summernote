@@ -1,0 +1,22 @@
+{
+  "name": "yii2-summernote",
+  "version": "1.0.0",
+  "description": "The [Summernote](https://summernote.org/) WYSIWYG-editor [Yii-widget](https://yiiframework.ru/), with all included assets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psad73/yii2-summernote.git"
+  },
+  "author": "Paweł Sadowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psad73/yii2-summernote/issues"
+  },
+  "homepage": "https://github.com/psad73/yii2-summernote#readme",
+  "devDependencies": {
+    "summernote": "^0.8.20"
+  }
+}

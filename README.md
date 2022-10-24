@@ -17,7 +17,7 @@ Install the widget via composer:
 Execute the command
 
 ```bash
-$ composer require floor12/yii2-summernote
+$ composer require psad73/yii2-summernote
 ```
 
 ## Usage

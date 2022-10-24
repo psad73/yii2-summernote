@@ -1,18 +1,15 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: floor12
- * Date: 2019-02-18
- * Time: 11:28
+ * 
  */
 
-namespace floor12\summernote;
+namespace psad73\summernote;
 
 use yii\web\AssetBundle;
 
 class SummernoteAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/floor12/yii2-summernote/assets/';
+    public $sourcePath = '@vendor/psad73/yii2-summernote/assets/';
     public $css = [
         'summernote.min.css',
         'codemirror.css',
