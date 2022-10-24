@@ -55,5 +55,6 @@ class Summernote extends InputWidget
     private function registerAssets()
     {
         SummernoteAsset::register($this->getView());
+        SummernoteNodeAsset::register($this->getView());
     }
 }

@@ -21,7 +21,7 @@ class SummernoteNodeAsset extends AssetBundle
         'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'psad73\SummernoteAsset',
+        'psad73\summernote\SummernoteAsset',
     ];
 
 }
