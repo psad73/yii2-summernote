@@ -36,7 +36,7 @@ The`ActiveForm` and `ActiveRecord` model example:
 ```php
 $form = ActiveForm::begin();
 
-echo $form->field($model, 'content_ru')
+echo $form->field($model, 'content_en')
     ->widget(Summernote::class);
              
 ActiveForm::end();
