@@ -48,7 +48,7 @@ An example of integrating with [my files module](https://github.com/floor12/yii2
 ```php
 $form = ActiveForm::begin();
 
-echo $form->field($model, 'content_ru')
+echo $form->field($model, 'content_en')
     ->widget(Summernote::class, [
         'fileField' => 'imagesDesktop',
         'fileModelClass' => $model::class
@@ -58,6 +58,16 @@ echo $form->field($model, 'imagesDesktop')
     ->widget(FileInputWidget::class);
 
 ActiveForm::end();
+```
+
+Widget (summernote) default options can be now overriden by wodgetOptions. All options recognized by summernote.js can be used.
+```php
+$form->field($model, 'notes')->widget(Summernote::class, ['options' => [                        
+        'widgetOptions' => [
+            'placeholder' => 'Some placeholder',
+            'lang' => 'pl-PL',
+        ]
+    ]]);
 ```
 
 ![Working example](https://floor12.net/en/files/default/image?hash=868c9752a86820692dabcb334f766df7&width=1500)
