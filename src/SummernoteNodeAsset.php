@@ -20,8 +20,7 @@ class SummernoteNodeAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
-        'yii\bootstrap\BootstrapPluginAsset',
-        'psad73\summernote\SummernoteAsset',
+        'yii\bootstrap\BootstrapPluginAsset',        
     ];
 
 }

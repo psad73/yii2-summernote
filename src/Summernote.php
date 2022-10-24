@@ -2,7 +2,6 @@
 /**
  * 
  */
-
 namespace psad73\summernote;
 
 use psad73\files\logic\ClassnameEncoder;
@@ -11,14 +10,19 @@ use yii\widgets\InputWidget;
 
 class Summernote extends InputWidget
 {
+
     /** @var ?string */
     public $fileField = null;
+
     /** @var ?string */
     public $fileModelClass = null;
+
     /** @var array */
     public $options = [];
+
     /** @var array */
     public $clientOptions = [];
+
     /** @var array */
     private $defaultOptions = ['class' => 'form-control'];
 
@@ -37,9 +41,7 @@ class Summernote extends InputWidget
     public function run()
     {
         $this->registerAssets();
-        echo $this->hasModel()
-            ? Html::activeTextarea($this->model, $this->attribute, $this->options)
-            : Html::textarea($this->name, $this->value, $this->options);
+        echo $this->hasModel() ? Html::activeTextarea($this->model, $this->attribute, $this->options) : Html::textarea($this->name, $this->value, $this->options);
         if ($this->fileField && $this->fileModelClass) {
             $classname = new ClassnameEncoder($this->fileModelClass);
             $this->getView()->registerJs("summernoteParams.fileField = '{$this->fileField}'");
@@ -47,9 +49,13 @@ class Summernote extends InputWidget
         } else {
             $this->getView()->registerJs("summernoteParams.callbacks = {}");
         }
+        if (key_exists('widgetOptions', $this->options)) {
+            $widgetOptions = $this->options['widgetOptions'];
+            foreach ($widgetOptions as $key => $value) {
+                $this->getView()->registerJs("summernoteParams.{$key} = '{$value}'");
+            }
+        }
         $this->getView()->registerJs('jQuery( "#' . $this->options['id'] . '" ).summernote(summernoteParams);');
-
-
     }
 
     private function registerAssets()
